@@ -40,13 +40,6 @@ class RecentChats extends StatelessWidget {
                   margin: const EdgeInsets.only(top: 20),
                   child: Row(
                     children: [
-                      CircleAvatar(
-                        radius: 28,
-                        backgroundImage: AssetImage(recentChat.avatar),
-                      ),
-                      SizedBox(
-                        width: 20,
-                      ),
                       GestureDetector(
                         onTap: () {
                           Navigator.push(context,
@@ -56,22 +49,31 @@ class RecentChats extends StatelessWidget {
                             );
                           }));
                         },
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text(
-                              recentChat.sender.name,
-                              style: MyTheme.heading2.copyWith(
-                                fontSize: 16,
+                        child: Row(children: [
+                          CircleAvatar(
+                            radius: 28,
+                            backgroundImage: AssetImage(recentChat.avatar),
+                          ),
+                          SizedBox(
+                            width: 20,
+                          ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                recentChat.sender.name,
+                                style: MyTheme.heading2.copyWith(
+                                  fontSize: 16,
+                                ),
                               ),
-                            ),
-                            Text(
-                              recentChat.text,
-                              style: MyTheme.bodyText1,
-                            ),
-                          ],
-                        ),
+                              Text(
+                                recentChat.text,
+                                style: MyTheme.bodyText1,
+                              ),
+                            ],
+                          ),
+                        ]),
                       ),
                       Spacer(),
                       Column(

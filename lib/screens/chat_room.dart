@@ -59,6 +59,7 @@ class _ChatRoomState extends State<ChatRoom> {
               onPressed: () {})
         ],
         elevation: 0,
+        backgroundColor: MyTheme.kPrimaryColor,
       ),
       backgroundColor: MyTheme.kPrimaryColor,
       body: GestureDetector(

@@ -49,9 +49,10 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
           icon: Icon(Icons.menu),
         ),
         title: Text(
-          'Chattie',
+          'Loseless',
           style: MyTheme.kAppTitle,
         ),
+        centerTitle: true,
         actions: [
           IconButton(
             icon: Icon(Icons.camera_alt),
@@ -59,6 +60,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
           )
         ],
         elevation: 0,
+        backgroundColor: MyTheme.kPrimaryColor,
       ),
       backgroundColor: MyTheme.kPrimaryColor,
       body: Column(
@@ -66,7 +68,6 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
           MyTabBar(tabController: tabController),
           Expanded(
             child: Container(
-              padding: EdgeInsets.symmetric(horizontal: 20),
               decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.only(
